@@ -1,5 +1,7 @@
 body {
   margin: 0;
+  background-color: #232424;
+  color: rgb(215, 233, 233);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -8,6 +10,8 @@ body {
 }
 
 header {
+  background-color: #232424;
+  color: rgb(54, 172, 119);
   text-align: center;
 }
 
