@@ -18,8 +18,9 @@ export default class PersonList extends React.Component {
   componentDidMount() {
     axios(config)
     .then(res => {
-      console.log(res.data);
+      console.log("API Response:", res.data);
       const items = res.data["Items"];
+      //const count = res.data["Count"];
       this.setState({ items });
       console.log(this.state.items)
     })
@@ -34,10 +35,13 @@ export default class PersonList extends React.Component {
         {
           this.state.items
             .map(quote =>
-              <p> "{quote.quote}" - {quote.author}</p>
+              <li key={quote.id}>
+                <p> "{quote.quote}" - {quote.author}</p>
+                <p> -------------------------------------- </p>              
+              </li>          
             )
         }
-      </ul>
+      </ul>  
     )
   }
 }
